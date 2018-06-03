@@ -50,7 +50,7 @@ public class NoneDirectRelationHandler {
     public static ArrayList<Person> getMaternalAunt(Person target){
         Person mother = target.getMother();
         Person grandFather = mother.getFather();        
-        ArrayList<Person> result =  grandFather.getDaughter();
+        ArrayList<Person> result = grandFather.getDaughter();
         result.remove(mother);
         return result;
     }
@@ -58,13 +58,17 @@ public class NoneDirectRelationHandler {
     public static ArrayList<Person> getSisterInLaw(Person target){
         Person spouse = target.getSpouse();
         Person spouseFather = spouse.getFather();        
-        return spouseFather.getDaughter();
+        ArrayList<Person> result = spouseFather.getDaughter();
+        result.remove(spouse);
+        return result;
     }
 
     public static ArrayList<Person> getBrotherInLaw(Person target){
         Person spouse = target.getSpouse();
         Person spouseFather = spouse.getFather();        
-        return spouseFather.getSon();
+        ArrayList<Person> result = spouseFather.getSon();
+        result.remove(spouse);
+        return result;
     }
 
     public static ArrayList<Person> getGrandDaughter(Person target){

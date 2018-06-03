@@ -20,7 +20,7 @@ public class Main {
             System.out.print("The " + relationship + " of " + personName + " is: ");
             printName(resultName);
         } catch(Error e){
-            System.out.print("ERROR: " + e.getMessage());
+            System.out.println("ERROR: " + e.getMessage());
         }      
     }
 

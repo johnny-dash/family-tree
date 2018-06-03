@@ -34,3 +34,28 @@ Expected Output: Chit, Vich
 # Note
 
 In the case that person in the family tree may don't have parent, spouse or the gender is not match with the relationship, the corresponding error will be popped up in the console.
+
+# Relations Reference
+
+## The following words are the relations that supported as input in this program:
+
+* Paternal Uncle
+* Maternal Uncle
+* Paternal Aunt
+* Maternal Aunt
+* Sister In Law
+* Brother In Law
+* Cousin
+* Father
+* Mother
+* Children
+* Son
+* Daughter
+* Brother
+* Sister
+* Grand Daughter
+* Grand Son
+
+## The King Shan's Family Tree Diagram:
+
+![The King Shan's Family Tree Diagram](./familyTree.png)

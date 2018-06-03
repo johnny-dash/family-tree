@@ -12,9 +12,9 @@ public class Relationship
 
     public static final String MATERNAL_AUNT = "Maternal Aunt";
 
-    public static final String SISTER_IN_LAW = "Sister Inlaw";
+    public static final String SISTER_IN_LAW = "Sister In Law";
 
-    public static final String BROTHER_IN_LAW = "Brother Inlaw";
+    public static final String BROTHER_IN_LAW = "Brother In Law";
 
     public static final String COUSINS = "Cousin";
 
