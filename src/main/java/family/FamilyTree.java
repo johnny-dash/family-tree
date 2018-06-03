@@ -20,7 +20,7 @@ public class FamilyTree {
         Person lika = new Person("Lika", Gender.FEMALE);
         Person saty = new Person("Saty", Gender.FEMALE);
         Person vya = new Person("Vya", Gender.MALE);
-        Person dirta = new Person("Dirta", Gender.MALE);
+        Person drita = new Person("Drita", Gender.MALE);
         Person jaya = new Person("Jaya", Gender.FEMALE);
         Person vrita = new Person("Vrita", Gender.MALE);
         Person vila = new Person("Vila", Gender.MALE);
@@ -45,7 +45,7 @@ public class FamilyTree {
         chit.setSpouse(ambi);
         vich.setSpouse(lika);
         saty.setSpouse(vya);
-        dirta.setSpouse(jaya);
+        drita.setSpouse(jaya);
         vila.setSpouse(jnki);
         chika.setSpouse(kpila);
         satvy.setSpouse(asva);
@@ -59,7 +59,7 @@ public class FamilyTree {
         kingShan.setChildren(vich);
         kingShan.setChildren(saty);
 
-        chit.setChildren(dirta);
+        chit.setChildren(drita);
         chit.setChildren(vrita);
 
         vich.setChildren(vila);
@@ -71,8 +71,8 @@ public class FamilyTree {
 
         vila.setChildren(lavnya);
 
-        dirta.setChildren(jata);
-        dirta.setChildren(driya);
+        drita.setChildren(jata);
+        drita.setChildren(driya);
 
         familyHashTable.put("King Shan", kingShan);
         familyHashTable.put("Queen Anga", queenAnga);
@@ -83,7 +83,7 @@ public class FamilyTree {
         familyHashTable.put("Lika", lika);
         familyHashTable.put("Saty", saty);
         familyHashTable.put("Vya", vya);
-        familyHashTable.put("Dirta", dirta);
+        familyHashTable.put("Drita", drita);
         familyHashTable.put("Jaya", jaya);
         familyHashTable.put("Vrita", vrita);
         familyHashTable.put("Vila", vila);

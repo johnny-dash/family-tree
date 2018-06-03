@@ -23,9 +23,57 @@ public class RelationshipMapper {
             case Relationship.DAUGHTER:
                 result = target.getDaughter();
                 break;            
+        
+            case Relationship.CHILDREN:
+                result = target.getChildren();
+                break;
+            
+            case Relationship.COUSINS:
+                result = NoneDirectRelationHandler.getCousin(target);
+                break;
+
+            case Relationship.BROTHER:
+                result = NoneDirectRelationHandler.getBrother(target);
+                break;
+            
+            case Relationship.SISTER:
+                result = NoneDirectRelationHandler.getSister(target);
+                break;
+
+            case Relationship.PATERNAL_UNCLE:
+                result = NoneDirectRelationHandler.getPaternalUncle(target);
+                break;
+
+            case Relationship.PATERNAL_AUNT:
+                result = NoneDirectRelationHandler.getPaternalAunt(target);
+                break;
+
+            case Relationship.MATERNAL_UNCLE:
+                result = NoneDirectRelationHandler.getMaternalUncle(target);
+                break;
+
+            case Relationship.MATERNAL_AUNT:
+                result = NoneDirectRelationHandler.getMaternalAunt(target);
+                break;
+            
+            case Relationship.SISTER_IN_LAW:
+                result = NoneDirectRelationHandler.getSisterInLaw(target);
+                break;
+
+            case Relationship.BROTHER_IN_LAW:
+                result = NoneDirectRelationHandler.getBrotherInLaw(target);
+                break;
+
+            case Relationship.GRAND_DAUGHTER:
+                result = NoneDirectRelationHandler.getGrandDaughter(target);
+                break;
+
+            case Relationship.GRAND_SON:
+                result = NoneDirectRelationHandler.getGrandSon(target);
+                break;
 
             default:
-                //throw error: no relations match 
+                //TBD: throw error: no relations match 
                 break;
 
         }
