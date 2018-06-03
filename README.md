@@ -8,7 +8,7 @@
 
 This program model out the Shan family tree so that given a "name" and a "relationship" as input, the output are the people that correspond to the relationship.
 
-Sample Input & output:
+## Sample Input & output:
 Input: Person = Ish; Relation = Brother;
 Expected Output: Chit, Vich
 
