@@ -1,6 +1,7 @@
-package family;
+package com.task;
 
 import java.util.*;
+
 
 public class Person {
     public final Gender gender;
@@ -18,9 +19,12 @@ public class Person {
     }    
 
     public void setChildren(Person child){
-        // Assumption: only couple could have child
+        // Assumption: only couple could have child, only after marrige could get the child
         if(this.parter == null ){
-            //throw error
+            throw new Error(this.name 
+                + " doesn't have a partner, in this system "
+                + (this.gender == Gender.MALE ? "he" : "she") 
+                + " can not have a child");
         }
 
         // need to wap in trancation
@@ -38,14 +42,14 @@ public class Person {
 
     public void setMother(Person mother){
         if(mother.gender != Gender.FEMALE) {
-            // throw error
+            throw new Error("The mother should be female");
         }
         this.mother = mother;
     }
 
     public void setFather(Person father){
         if(father.gender != Gender.MALE){
-            // throw
+            throw new Error("The father should be male");
         }
         this.father = father;
     }
@@ -53,13 +57,15 @@ public class Person {
     public void setSpouse(Person spouse){
         // Assumption: this case only consider heterosexuality
         if(spouse.gender == this.gender){
-            //throw error
+            throw new Error("The spouse's gender should be " + (this.gender == Gender.MALE ? "female" : "male"));
         }
         this.parter = spouse;
-        // need to inprove
-        if(spouse.getSpouse() == null){
-            spouse.setSpouse(this);
+
+        if(spouse.getSpouse() == null){            
+            // need to inprove
+            spouse.setSpouse(this);        
         }
+        
     }
 
     public ArrayList<Person> getChildren() {
@@ -87,14 +93,16 @@ public class Person {
     }
 
     public Person getFather() {
+        if(this.father == null) throw new Error(this.name + " doesn't have a father");
         return this.father;
     }
 
     public Person getMother() {
+        if(this.mother == null) throw new Error(this.name + " doesn't have a mother");
         return this.mother;
     }
 
-    public Person getSpouse() {
+    public Person getSpouse() {        
         return parter;
     }
 

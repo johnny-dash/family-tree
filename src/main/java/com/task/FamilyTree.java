@@ -1,16 +1,22 @@
-package family;
+package com.task;
 
-import java.util.*;
+import java.util.Hashtable;
+import java.util.ArrayList;
 
 public class FamilyTree {
+    //hash table is used to mapping the string name and object
     private Hashtable<String, Person> familyHashTable = new Hashtable<String, Person>(); 
 
     public FamilyTree(){        
         initializeTree();
     } 
 
+    /**
+     * This function is used to initilize the family tree
+     */
     private void initializeTree(){
-        //TBD: initial the persons and relations. Could be imporve in the future by reading config or generate seed file
+        //TBD: initial the persons and relations. 
+        // Could be imporved in the future by reading config or generate seed file
         Person kingShan = new Person("King Shan", Gender.MALE);
         Person queenAnga = new Person("Queen Anga", Gender.FEMALE);
         Person ish = new Person("Ish", Gender.MALE);
@@ -105,9 +111,20 @@ public class FamilyTree {
         familyHashTable.put("Jata", jata);
     }
 
+
+    /**
+     * This function is used search the relatives
+     *
+     * @param personName the input target person
+     * @param relation the input relationship name
+     * 
+     * @return ArrayList that contain the relatives object
+     */
     public ArrayList<String> serachRelatives(String personName, String relation) {
+        //find out the person first
         Person targetPerson = familyHashTable.get(personName);          
         ArrayList<Person> resultPersons = new ArrayList<Person>();
+        // the if the person existed
         if(targetPerson != null){
             resultPersons = RelationshipMapper.mapRelations(targetPerson, relation);
         }else{

@@ -1,5 +1,7 @@
-package family;
+package com.task;
 
+
+//This is a enum class contain all the relationship name
 public class Relationship
 {
     public static final String PATERNAL_UNCLE = "Paternal Uncle";

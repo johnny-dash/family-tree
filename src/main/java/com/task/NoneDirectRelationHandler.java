@@ -1,39 +1,35 @@
-package family;
+package com.task;
 
 import java.util.ArrayList;
 
+
+// This class contain all the method to get the target relatives
 public class NoneDirectRelationHandler {
     public static ArrayList<Person> getCousin(Person target){
         // Assume father and mother has same children
-        Person father = target.getFather();    
-        //TBD: handle exception that father not existed    
+        Person father = target.getFather();          
         ArrayList<Person> result = father.getChildren();
         result.remove(target);
         return result;
     } 
 
     public static ArrayList<Person> getBrother(Person target){
-        Person father = target.getFather();
-        //TBD: handle exception that father not existed   
+        Person father = target.getFather();          
         ArrayList<Person> result = father.getSon();
         result.remove(target);
         return result;
     }
 
     public static ArrayList<Person> getSister(Person target){
-        Person father = target.getFather();
-        //TBD: handle exception that father not existed   
+        Person father = target.getFather();           
         ArrayList<Person> result =  father.getDaughter();
         result.remove(target);
         return result;
     }
 
     public static ArrayList<Person> getPaternalUncle(Person target){
-        //TBD: handle exception that father not existed   
-        Person father = target.getFather();
-        //TBD: handle exception that father not existed   
+        Person father = target.getFather();        
         Person grandFather = father.getFather();   
-        
         ArrayList<Person> result = grandFather.getSon();
         result.remove(father);
         return result;
@@ -80,7 +76,7 @@ public class NoneDirectRelationHandler {
                 result.addAll(grandDaughters);
             }
         } else {
-            // TBD: throw no children
+            throw new Error(target + "'s children don't have any daughter yet");
         }
         return result;
     }
@@ -94,7 +90,7 @@ public class NoneDirectRelationHandler {
                 result.addAll(grandDaughters);
             }
         } else {
-            // TBD: throw no children
+            throw new Error(target + "'s children don't have any son yet");
         }
         return result;
     }

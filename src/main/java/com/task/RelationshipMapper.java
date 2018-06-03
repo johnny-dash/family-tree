@@ -1,8 +1,17 @@
-package family;
+package com.task;
 
 import java.util.ArrayList;
 
 public class RelationshipMapper {
+    /**
+     * This function is used to apply the specific geter method to target person
+     * by detect the relation string
+     *
+     * @param targe the input target person object
+     * @param relation the input relationship name
+     * 
+     * @return ArrayList that contain the relatives object
+     */
     public static ArrayList<Person> mapRelations(Person target,String relation){
         ArrayList<Person> result = new ArrayList<Person>();
         switch(relation){
@@ -80,6 +89,15 @@ public class RelationshipMapper {
         return result;
     }
 
+
+    /**
+     * This function is used to get the name of each person object
+     * in person arraylist, could be rewrite in reduce method in the future.
+     *
+     * @param persons the arraylist of person object     
+     * 
+     * @return String arrayList of person name
+     */
     public static ArrayList<String> getNameFromPerson(ArrayList<Person> persons){
         ArrayList<String> nameList = new ArrayList<String>();
         for(Person person : persons){

@@ -4,6 +4,14 @@
 @Email:  maodi101@gmail.com
 -->
 
+# Introduction
+
+This program model out the Shan family tree so that given a "name" and a "relationship" as input, the output are the people that correspond to the relationship.
+
+Sample Input & output:
+Input: Person = Ish; Relation = Brother;
+Expected Output: Chit, Vich
+
 # Installation & Usage
 
 1.  Make sure JDK 8 and Maven 3 are installed
@@ -17,3 +25,12 @@
 ## Run
 
 `java -jar target/*.jar`
+
+# Assumptions
+
+1.  All the couple are heterosexuality.
+2.  Only when a person get marry, he/she could have children.
+
+# Note
+
+In the case that person in the family tree may don't have parent, spouse or the gender is not match with the relationship, the corresponding error will be popped up in the console.
